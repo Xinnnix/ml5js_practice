@@ -43,10 +43,14 @@ function setup(){
   ukeButton = createButton('ukulele');
   ukeButton.mousePressed(function(){
     classifier.addImage('ukulele');
+    console.log('add ukulele');
+
   });
   whistleButton = createButton('whistle');
   whistleButton.mousePressed(function(){
     classifier.addImage('whistle');
+    console.log('add whistle');
+
   });
   trainButton = createButton('train');
   trainButton.mousePressed(function(){
@@ -61,4 +65,5 @@ function draw(){
   fill(255);
   textSize(20);
   text(label, 10, height-20);
+
 }
