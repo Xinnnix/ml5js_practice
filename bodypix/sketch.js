@@ -28,14 +28,13 @@ function gotResults(error, result) {
         console.log(error);
         return;
     }
-    console.log(result);
+    //console.log(result);
     segmentation = result;
 
-    //background(0);
     image(video, 0, 0, width, height);
     background(0);
     image(segmentation.backgroundMask, 0, 0, width, height);
 
-    bodypix.segment(video,gotResults, options);
+    bodypix.segment(gotResults, options);
 
 }
